@@ -12,9 +12,9 @@ import {
   useMediaQuery,
 } from '@mui/material'
 import {
+  Home as HomeIcon,
+  PieChart as PieChartIcon,
   BarChart as BarChartIcon,
-  People as PeopleIcon,
-  ShoppingBag as ShoppingBagIcon,
 } from '@mui/icons-material'
 import { NavItem } from '../NavItem'
 import Logo from '../../../public/images/logo2.png'
@@ -31,19 +31,19 @@ interface SidebarProps {
 
 const items = [
   {
-    href: '/dashboard',
-    icon: <BarChartIcon fontSize="small" />,
+    href: '/dashboard/overview',
+    icon: <HomeIcon fontSize="small" />,
     title: 'Overview',
   },
   {
-    href: '/customers',
-    icon: <PeopleIcon fontSize="small" />,
-    title: 'Customers',
+    href: '/dashboard/finance',
+    icon: <PieChartIcon fontSize="small" />,
+    title: 'Finance',
   },
   {
-    href: '/products',
-    icon: <ShoppingBagIcon fontSize="small" />,
-    title: 'Products',
+    href: '/dashboard/analytics',
+    icon: <BarChartIcon fontSize="small" />,
+    title: 'Analytics',
   },
 ]
 

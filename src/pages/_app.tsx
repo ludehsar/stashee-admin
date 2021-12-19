@@ -2,11 +2,11 @@ import React from 'react'
 import { AppProps } from 'next/app'
 import { CssBaseline, ThemeProvider } from '@mui/material'
 
-import { theme } from '../styles/theme'
+import { lightTheme } from '../styles/theme'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={lightTheme}>
       <CssBaseline />
       <Component {...pageProps} />
     </ThemeProvider>

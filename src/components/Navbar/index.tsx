@@ -1,17 +1,12 @@
 import React from 'react'
-import { Badge, Box, Avatar } from '@mui/material'
+import { Badge, Box, Avatar, IconButton, Toolbar } from '@mui/material'
 import {
   Menu as MenuIcon,
   Notifications as NotificationsIcon,
   Search as SearchIcon,
 } from '@mui/icons-material'
 
-import {
-  MenuButton,
-  NavbarContainer,
-  NavButton,
-  NavToolbar,
-} from './Navbar.styled'
+import { NavbarContainer } from './Navbar.styled'
 
 interface NavbarProps {
   onSidebarOpen: () => void
@@ -19,30 +14,70 @@ interface NavbarProps {
 
 const Navbar: React.FC<NavbarProps> = ({ onSidebarOpen }) => {
   return (
-    <NavbarContainer position="fixed">
-      <NavToolbar disableGutters>
-        <MenuButton
+    <NavbarContainer
+      sx={{
+        left: {
+          lg: 280,
+        },
+        width: {
+          lg: 'calc(100% - 280px)',
+        },
+      }}
+    >
+      <Toolbar
+        disableGutters
+        sx={{
+          minHeight: 64,
+          left: 0,
+          px: 2,
+        }}
+      >
+        <IconButton
           size="medium"
           aria-label="menu"
           tabIndex={0}
           type="button"
           onClick={onSidebarOpen}
+          sx={{
+            display: {
+              xs: 'inline-flex',
+              lg: 'none',
+            },
+          }}
         >
           <MenuIcon />
-        </MenuButton>
+        </IconButton>
         <Box flexGrow={1} />
-        <NavButton size="medium" aria-label="menu" tabIndex={0} type="button">
+        <IconButton
+          size="medium"
+          aria-label="menu"
+          tabIndex={0}
+          type="button"
+          sx={{ ml: 1 }}
+        >
           <SearchIcon />
-        </NavButton>
-        <NavButton size="medium" aria-label="menu" tabIndex={0} type="button">
+        </IconButton>
+        <IconButton
+          size="medium"
+          aria-label="menu"
+          tabIndex={0}
+          type="button"
+          sx={{ ml: 1 }}
+        >
           <Badge badgeContent={4} color="error">
             <NotificationsIcon />
           </Badge>
-        </NavButton>
-        <NavButton size="medium" aria-label="menu" tabIndex={0} type="button">
-          <Avatar alt="John Doe" src="/path/to/image" />
-        </NavButton>
-      </NavToolbar>
+        </IconButton>
+        <Avatar
+          alt="John Doe"
+          src="/path/to/image"
+          sx={{
+            height: 40,
+            width: 40,
+            ml: 1,
+          }}
+        />
+      </Toolbar>
     </NavbarContainer>
   )
 }
