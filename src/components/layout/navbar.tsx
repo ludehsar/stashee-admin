@@ -1,16 +1,27 @@
 import React from 'react'
-import { Badge, Box, Avatar, IconButton, Toolbar } from '@mui/material'
+import {
+  Badge,
+  Box,
+  Avatar,
+  IconButton,
+  Toolbar,
+  styled,
+  AppBar,
+} from '@mui/material'
 import {
   Menu as MenuIcon,
   Notifications as NotificationsIcon,
   Search as SearchIcon,
 } from '@mui/icons-material'
 
-import { NavbarContainer } from './Navbar.styled'
-
 interface NavbarProps {
   onSidebarOpen: () => void
 }
+
+const NavbarContainer = styled(AppBar)(({ theme }) => ({
+  backgroundColor: theme.palette.background.paper,
+  boxShadow: theme.shadows[3],
+}))
 
 const Navbar: React.FC<NavbarProps> = ({ onSidebarOpen }) => {
   return (

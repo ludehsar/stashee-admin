@@ -10,7 +10,7 @@ import {
 } from '@mui/material'
 import { LockOutlined as LockOutlinedIcon } from '@mui/icons-material'
 
-import AuthLayout from '../../../layouts/AuthLayout'
+import { AuthLayout } from '../../layouts'
 
 const LoginPage: NextPage = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {

@@ -1,7 +1,7 @@
 import { Box, Container, Typography } from '@mui/material'
 import { NextPage } from 'next'
 
-import AppLayout from '../../layouts/AppLayout'
+import { AppLayout } from '../../layouts'
 
 const DashboardOverview: NextPage = () => {
   return (

@@ -18,7 +18,7 @@ import {
   PieChart as PieChartIcon,
   BarChart as BarChartIcon,
 } from '@mui/icons-material'
-import { NavItem } from '../NavItem'
+import NavItem from './nav-item'
 import Logo from '../../../public/images/logo2.png'
 
 interface SidebarProps {
@@ -111,7 +111,6 @@ const Sidebar: React.FC<SidebarProps> = (props) => {
         />
         <Box sx={{ flexGrow: 1 }}>
           <List
-            subheader
             sx={{
               listStyle: 'none',
               margin: 0,

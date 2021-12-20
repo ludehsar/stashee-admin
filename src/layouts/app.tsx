@@ -1,9 +1,18 @@
 import React, { useState } from 'react'
-import { Box } from '@mui/material'
+import { Box, styled } from '@mui/material'
 
-import Navbar from '../components/Navbar'
-import Sidebar from '../components/Sidebar'
-import { AppLayoutContainer } from './Layout.styled'
+import Navbar from '../components/layout/navbar'
+import Sidebar from '../components/layout/sidebar'
+
+const AppLayoutContainer = styled('div')(({ theme }) => ({
+  display: 'flex',
+  flex: '1 1 auto',
+  maxWidth: '100%',
+  paddingTop: 64,
+  [theme.breakpoints.up('lg')]: {
+    paddingLeft: 280,
+  },
+}))
 
 const AppLayout: React.FC = ({ children }) => {
   const [isSidebarOpen, setSidebarOpen] = useState(true)

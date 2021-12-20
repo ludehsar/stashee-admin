@@ -1,7 +1,7 @@
 import React from 'react'
 import NextLink from 'next/link'
 import { Typography, TypographyProps, Link } from '@mui/material'
-import Constants from '../../constants'
+import Constants from '../constants'
 
 const Copyright: React.FC<TypographyProps> = (props) => {
   return (

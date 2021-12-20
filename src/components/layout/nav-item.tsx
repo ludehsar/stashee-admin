@@ -9,7 +9,7 @@ interface NavItemProps {
   title: string
 }
 
-export const NavItem: React.FC<NavItemProps> = (props) => {
+const NavItem: React.FC<NavItemProps> = (props) => {
   const { href, icon, title, ...others } = props
   const router = useRouter()
   const active = href ? router.pathname === href : false
@@ -54,3 +54,5 @@ export const NavItem: React.FC<NavItemProps> = (props) => {
     </ListItem>
   )
 }
+
+export default NavItem
