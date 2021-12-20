@@ -7,6 +7,8 @@ import {
   Box,
   Divider,
   Drawer,
+  List,
+  ListSubheader,
   Theme,
   Typography,
   useMediaQuery,
@@ -18,11 +20,6 @@ import {
 } from '@mui/icons-material'
 import { NavItem } from '../NavItem'
 import Logo from '../../../public/images/logo2.png'
-import {
-  SidebarList,
-  SidebarListGroup,
-  SidebarListSubHeader,
-} from './Sidebar.styled'
 
 interface SidebarProps {
   open: boolean
@@ -113,9 +110,38 @@ const Sidebar: React.FC<SidebarProps> = (props) => {
           }}
         />
         <Box sx={{ flexGrow: 1 }}>
-          <SidebarListGroup subheader>
-            <SidebarListSubHeader>Dashboard</SidebarListSubHeader>
-            <SidebarList>
+          <List
+            subheader
+            sx={{
+              listStyle: 'none',
+              margin: 0,
+              px: 0,
+              pt: 0,
+              pb: 8,
+              position: 'relative',
+            }}
+          >
+            <ListSubheader
+              sx={{
+                backgroundColor: 'inherit',
+                textTransform: 'uppercase',
+                p: 0,
+                ml: 4,
+                lineHeight: 2.5,
+                fontSize: '0.75rem',
+                fontWeight: 700,
+              }}
+            >
+              Dashboard
+            </ListSubheader>
+            <List
+              sx={{
+                listStyle: 'none',
+                margin: 0,
+                padding: 0,
+                position: 'relative',
+              }}
+            >
               {items.map((item) => (
                 <NavItem
                   key={item.title}
@@ -124,8 +150,8 @@ const Sidebar: React.FC<SidebarProps> = (props) => {
                   title={item.title}
                 />
               ))}
-            </SidebarList>
-          </SidebarListGroup>
+            </List>
+          </List>
         </Box>
       </Box>
     </>

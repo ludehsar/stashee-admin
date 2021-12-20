@@ -1,6 +1,6 @@
 import { NextPage } from 'next'
 
-import AppLayout from '../../../layouts/AppLayout'
+import AppLayout from '../../layouts/AppLayout'
 
 const DashboardAnalytics: NextPage = () => {
   return <AppLayout>Analytics</AppLayout>
