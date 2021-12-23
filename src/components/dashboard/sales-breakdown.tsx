@@ -21,7 +21,7 @@ const SalesBreakdown: React.FC = () => {
     colors: ['#334AB1', '#6E7AD8'],
     fill: {
       type: 'solid',
-      // opacity: 1,
+      opacity: 1,
     },
     dataLabels: {
       enabled: false,
