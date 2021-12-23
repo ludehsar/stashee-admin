@@ -7,7 +7,8 @@ import {
 } from '@mui/icons-material'
 
 import { AppLayout } from '../../layouts'
-import SalesRevenue from '../../components/dashboard/revenue'
+import SalesRevenue from '../../components/dashboard/sales-revenue'
+import SalesBreakdown from '../../components/dashboard/sales-breakdown'
 
 const DashboardFinance: NextPage = () => {
   return (
@@ -67,6 +68,7 @@ const DashboardFinance: NextPage = () => {
           </Grid>
           <Grid
             container
+            spacing={4}
             sx={{
               mt: 2,
             }}
@@ -74,7 +76,9 @@ const DashboardFinance: NextPage = () => {
             <Grid item lg={8} md={6} sm={12}>
               <SalesRevenue />
             </Grid>
-            <Grid item lg={4} md={6} sm={12}></Grid>
+            <Grid item lg={4} md={6} sm={12}>
+              <SalesBreakdown />
+            </Grid>
           </Grid>
         </Container>
       </Box>
