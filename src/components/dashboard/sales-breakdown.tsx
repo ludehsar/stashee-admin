@@ -8,7 +8,7 @@ const ReactApexChart = dynamic(() => import('react-apexcharts'), { ssr: false })
 const SalesBreakdown: React.FC = () => {
   const theme = useTheme()
 
-  const series = [44, 55]
+  const series = [44, 55, 23]
 
   const options: ApexOptions = {
     chart: {
@@ -18,7 +18,7 @@ const SalesBreakdown: React.FC = () => {
       },
       background: theme.palette.background.paper,
     },
-    colors: ['#334AB1', '#6E7AD8'],
+    colors: ['#334AB1', '#6E7AD8', '#7BC67E'],
     fill: {
       type: 'solid',
       opacity: 1,
@@ -33,7 +33,7 @@ const SalesBreakdown: React.FC = () => {
       position: 'bottom',
       horizontalAlign: 'center',
     },
-    labels: ['Subscriptions', 'Services'],
+    labels: ['Subscriptions', 'Services', 'Verification'],
   }
 
   return (

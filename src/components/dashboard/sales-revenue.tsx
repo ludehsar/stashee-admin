@@ -31,6 +31,22 @@ const SalesRevenue: React.FC = () => {
           x: new Date('13 Jan 2021 GMT').getTime(),
           y: 22,
         },
+        {
+          x: new Date('14 Jan 2021 GMT').getTime(),
+          y: 21,
+        },
+        {
+          x: new Date('15 Jan 2021 GMT').getTime(),
+          y: 19,
+        },
+        {
+          x: new Date('16 Jan 2021 GMT').getTime(),
+          y: 38,
+        },
+        {
+          x: new Date('17 Jan 2021 GMT').getTime(),
+          y: 30,
+        },
       ],
       name: 'User Registered',
     },
@@ -47,6 +63,22 @@ const SalesRevenue: React.FC = () => {
         {
           x: new Date('13 Jan 2021 GMT').getTime(),
           y: 24,
+        },
+        {
+          x: new Date('14 Jan 2021 GMT').getTime(),
+          y: 17,
+        },
+        {
+          x: new Date('15 Jan 2021 GMT').getTime(),
+          y: 8,
+        },
+        {
+          x: new Date('16 Jan 2021 GMT').getTime(),
+          y: 21,
+        },
+        {
+          x: new Date('17 Jan 2021 GMT').getTime(),
+          y: 26,
         },
       ],
       name: 'User Paid',

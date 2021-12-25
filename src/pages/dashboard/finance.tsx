@@ -9,6 +9,7 @@ import {
 import { AppLayout } from '../../layouts'
 import SalesRevenue from '../../components/dashboard/sales-revenue'
 import SalesBreakdown from '../../components/dashboard/sales-breakdown'
+import FinanceSummary from '../../components/dashboard/finance-summary'
 
 const DashboardFinance: NextPage = () => {
   return (
@@ -25,6 +26,7 @@ const DashboardFinance: NextPage = () => {
             container
             sx={{
               justifyContent: 'space-between',
+              mb: 4,
             }}
           >
             <Grid item>
@@ -66,13 +68,10 @@ const DashboardFinance: NextPage = () => {
               </Button>
             </Grid>
           </Grid>
-          <Grid
-            container
-            spacing={4}
-            sx={{
-              mt: 2,
-            }}
-          >
+          <Grid container spacing={4}>
+            <Grid item lg={12}>
+              <FinanceSummary />
+            </Grid>
             <Grid item lg={8} md={6} sm={12}>
               <SalesRevenue />
             </Grid>
